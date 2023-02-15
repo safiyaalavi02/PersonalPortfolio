@@ -1,0 +1,355 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif ;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+ /* specifying the body of the website (color, etc*/ 
+body{
+    background: #E7DFD8;
+    color: #231F20;
+}
+
+ /* adding in my background image*/ 
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/cover.png);
+}
+
+.container{
+    padding: 20px 20px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* adding in my logo image*/ 
+.logo{
+    width: 300px;
+}
+
+nav ul{
+    outline-style: dotted;
+    padding: 10px 20px;
+    color: #0D2403;
+    position:center;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight:bold;
+
+
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0px 90px;
+}
+
+nav ul li a{
+    color: #0D2403;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    float: left;
+    
+}
+
+nav ul li a::after{
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: #596B51;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text p{
+    margin-top: 10%;
+    font-size: 40px;
+    color: #0D2403;
+    padding: 10px 20px;
+    position:relative; 
+    left: 15px;
+    width: 725px
+}
+
+.header-text h1{
+    margin-top: 20px;
+    font-size: 60px;
+    color: #596B51;
+    padding: 0px 20px;
+}
+
+.header-text h1 span{
+    margin-top: 20px;
+    font-size: 60px;
+    color: #0D2403;
+}
+
+/*-----------about----------- --*/
+#about{
+    padding: 80px 0;
+    color: #231F20; 
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.subtitle{
+    font-size: 60px;
+    font-weight: 600;
+    color: #231F20;
+}
+
+.body{
+    font-size: 21px;
+    font-family: Verdana, sans-serif;
+    color: #231F20;
+    margin: 10px 0;
+    /*background-color: #CDC7BF;*/
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 30px;
+    
+}
+
+.tab-links{
+    margin-right: 90px;
+    font-size: 28px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    font-weight: 600;
+    color: #596B51;
+}
+.tab-links::after{
+    content:"";
+    width: 0;
+    height: 3px;
+    background: #596B51;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+    font-size: 18px;
+    color: #596B51;
+}
+
+.tab-contents ul li span{
+    color: #231F20;
+    font-size: 22px;
+    font-weight: bold;
+
+}
+
+.tab-contents{
+    display: none;
+}
+
+/*displays tab contents */
+.tab-contents.active-tab{
+    display: block;   
+}
+
+/*-----------about----------- --*/
+#portfolio{
+    padding: 50px 0; /*basically this means theres padding of 50 px from top and bottom*/
+    
+}
+
+.work-list{ /*displays images in a fitted line*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.layer{
+    color: #D8D7CB;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.8), #595c57);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+
+}
+
+.layer a{
+    margin-top: 20px;
+    color:#0D2403;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 60px;
+    background: #D8D7CB;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img{ /*allows us to make hover effect on work */
+    transform: scale(1.1);
+}
+
+.work:hover .layer{ /*brings back the added content*/
+    height: 100%;  
+}
+
+.btn{
+    display: block;  /*displays as a block*/
+    margin: 50px auto; /*centers content*/
+    width: fit-content;
+    padding: 14px 50px;
+    border-radius: 6px; /*adds the circulur affect*/
+    text-decoration: none; /*removes underline*/
+    color: #0D2403;
+    transition: btn 0.5s;
+    background: #A5B99D;
+
+}
+
+.btn:hover{
+    background: #596B51;
+}
+
+/*-------------contact-------------*/
+.contact-left{
+    flex-basis: 35%; /*specifies the width of the columns */
+}
+
+.contact-right{
+    flex-basis: 65%;
+}
+
+.contact-left p{
+    margin-top: 30px; /*specifies the width of the margin */
+}
+
+.contact-left h1{
+    font-size: 40px; /*specifies the width of the margin */
+}
+
+.contact-left p i{
+    color: #596B51;
+    margin-right: 15px;
+    font-size: 25px;
+}   
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #596B51;
+    display: inline-block;
+}
+
+.social-icons a:hover{
+    color:#231F20;
+    transform: translateY(-5px);
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: #A5B99D;
+    font-size: 18px;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    color: #0D2403;
+    background: #D8D7CB;
+    padding: 15px;
+    margin: 15px 0;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.btn2:hover{
+    background: #596B51;
+}
+
+#msg{
+    color:#A5B99D;
+    margin-top: -120px;
+    display: block;
+}
