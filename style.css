@@ -14,22 +14,6 @@ body{
     color: #231F20;
 }
 
- /* adding in my background image*/ 
-#header{
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right,#d1d8d0, #E7DFD8);
-}
-
-.box-area{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
 .box-area li{
     position: absolute;
     display: block;
@@ -39,6 +23,7 @@ body{
     background:rgba(108, 130, 105, 0.45);
     animation: animate 20s linear infinite;
     bottom: -10px;
+
 }
 
 .box-area li:nth-child(1){
@@ -131,8 +116,14 @@ body{
     100%{
         transform: translateY(-800px) rotate(360deg);
         opacity: 1;
-    }
-    
+    } 
+}
+
+#header{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right,#d1d8d0, #E7DFD8);
+    z-index: 9999;
 }
 
 .container{
@@ -146,11 +137,6 @@ nav{
     flex-wrap: wrap;
 }
 
-/* adding in my logo image*/ 
-.logo{
-    width: 300px;
-}
-
 nav ul{
     background: #A5B99D;
     outline-style: dotted;
@@ -159,10 +145,9 @@ nav ul{
     position:center;
     margin-left: auto;
     margin-right: auto;
-    font-weight:bold;
-
-
+    z-index: 9998;
 }
+
 nav ul li{
     display: inline-block;
     list-style: none;
@@ -237,6 +222,15 @@ img{
     border-radius: 15px;
     overflow: hidden; 
     position: relative;
+}
+
+.box-area{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 /*-----------about----------- --*/
