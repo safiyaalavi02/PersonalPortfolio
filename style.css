@@ -47,7 +47,7 @@ body{
     height: 80px;
     animation-delay: 0s;
     animation-duration: 55s;
-    bottom: 40px;
+    bottom: 400px;
 }
 
 .box-area li:nth-child(2){
@@ -70,7 +70,7 @@ body{
     width: 70px;
     height: 70px;
     animation-duration: 35s;
-    bottom: 60px;
+    bottom: 300px;
 }
 
 .box-area li:nth-child(5){
@@ -95,7 +95,7 @@ body{
     width: 150px;
     height: 150px;
     animation-duration: 55s;
-    bottom: 130px;
+    bottom: 230px;
 }
 
 
