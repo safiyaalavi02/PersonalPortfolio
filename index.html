@@ -7,13 +7,26 @@
     <title>Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/33f2c5cfaa.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap');
+    </style>
 </head>
 <body>
-
 <div id="header">
+    <ul class="box-area">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
     <div class="container">
         <nav>
-            <!-- <img src="images/logo.png" class="logo"> -->
             <ul>
                <li><a href="#header">HOME</a></li>
                <li><a href="#about">ABOUT</a></li> 
@@ -22,12 +35,17 @@
             </ul>
         </nav>
         <div class="header-text">
-            <p></p>
-            <h1></h1>
+            <div class="header-col-1">
+                <h1><span>Senior Statistics and Data Science Major</span></h1>
+                <p>SAFIYA ALAVI</p>
+                <h1>Hello! Welcome to my portfolio and online resume site. Scroll down to read more about me and some of my sample data analytics projects. Currently, I am working towards finishing my degree in June 2023. I am looking for an entry-level position in the data analytics field for post-graduation. </h1>
+            </div>
+            <div class="header-col-2">
+                <img src="images/coverpic.jpeg" style="width:375px;height:540px;">
+            </div>
         </div>
     </div>
 </div>
-
 <!-----------about----------- -->
 
 <div id="about">
@@ -97,6 +115,30 @@
 <div id="portfolio">
     <div class="container"> 
         <h1 class="subtitle">MY WORK</h1>
+        
+        <div class="work-list">
+            <div class="work">
+                <img src="images/4.png">
+                <div class="layer">
+                    <p><br><br><br><br><br><br>Group project in which we used autoencoders (a branch of feed-forward neural networks) to detect anomolies in a twitter dataset.</p>
+                    <a href="https://github.com/pstat197/vignette-anomaly-autoencoders/blob/main/vignette_script.ipynb"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div> 
+            <div class="work">
+                <img src="images/5.png">
+                <div class="layer">
+                    <p><br><br><br><br><br><br>Coded website to display research results from data analysis of plankton dataset to explore effects of rising ocean temperatures on global carbon cycling</p>
+                    <a href="https://safiyaalavi02.github.io/planktonresearch/"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/6.png">
+                <div class="layer">
+                    <p><br><br><br><br><br><br>In this role, I collaborated with a team of peers to complete a NLP project sponsored by biopharmaceutical company Amgen. We benchmarked existing NLP and text mining algorithms to create a knowledge graph of important entities and their relations to each other (genes, diseases, chemicals, etc) from free text. This project ultimately increases Amgen’s efficiency in searching for these entities and their relations, discovering new information, and enabling complex decision making.                      </p>
+                    <a href=""><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
         <div class="work-list">
             <div class="work">
                 <img src="images/1.png">
@@ -119,16 +161,7 @@
                     <a href="#"><i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
-            <div class="work">
-                <img src="images/4.png">
-                <div class="layer">
-                    <p><br><br><br><br><br><br>Group project in which we used autoencoders (a branch of feed-forward neural networks) to detect anomolies in a twitter dataset.</p>
-                    <a href="https://github.com/pstat197/vignette-anomaly-autoencoders/blob/main/vignette_script.ipynb"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            
         </div>
-    
         <a href="#" class="btn">Back to top</a>
     </div>
 </div>
